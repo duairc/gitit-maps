@@ -1,7 +1,7 @@
 name:           gitit-maps
 version:        0.1
 synopsis:       Plugins for embedding Google Maps in Gitit pages
-license:        BSD3
+license:        GPL
 license-file:   LICENSE
 author:         Shane O'Brien
 maintainer:     shane@duairc.com
