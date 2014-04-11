@@ -13,7 +13,7 @@ import          Network.CGI (formDecode)
 
 
 -- gitit ---------------------------------------------------------------------
-import           Network.Gitit.Interface (Plugin (PreCommitTransform))
+import           Network.Gitit (Plugin (PreCommitTransform))
 
 
 -- HTTP ----------------------------------------------------------------------
