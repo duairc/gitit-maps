@@ -164,7 +164,7 @@ getImage map_ = do
         let zoom' = urlEncode $ show $ round $ 3 + (1.8 * zoom)
         let maptype' = urlEncode $ map toLower $ show $ maptype
         let scale = if half then "1" else "2"
-        let size = if half then "335x429" else "340x320"
+        let size = if half then "340x429" else "340x320"
         let format = case maptype of {RoadMap -> "png"; _ -> "jpg"}
         let query = concat
              [ "?center="
@@ -185,7 +185,7 @@ getImage map_ = do
         let url = google path query
         let file = "maps" </> sha1sum (path ++ query) <.> format
         let transform file' body = do
-             let size' = if half then (335, 207) else (680, 414)
+             let size' = if half then (340, 207) else (680, 414)
              image <- case maptype of
                 RoadMap -> loadPngByteString body
                 _ -> loadJpegByteString body
@@ -200,7 +200,7 @@ getImage map_ = do
         let heading' = urlEncode $ show $ heading
         let pitch' = urlEncode $ show $ pitch
         let fov = urlEncode $ show $ 120 - 110 * zoom / 10
-        let size = if half then "335x457" else "640x640"
+        let size = if half then "340x457" else "640x640"
         let query = concat
              [ "?location="
              , location
@@ -218,7 +218,7 @@ getImage map_ = do
         let url = google path query
         let file = "maps" </> sha1sum (path ++ query) <.> "jpg"
         let transform file' body = do
-             let size' = if half then (335, 207) else (680, 414)
+             let size' = if half then (340, 207) else (680, 414)
              image <- loadJpegByteString body
              image' <- newImage size'
              if half then do
