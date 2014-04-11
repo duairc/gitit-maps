@@ -21,21 +21,28 @@ library
     src
 
   exposed-modules:
+    Network.Gitit.Handlers.Map
     Network.Gitit.Plugins.Maps
     Network.Gitit.Plugins.Maps.Preprocess
 
   build-depends:
     base,
+    bytestring,
     cgi,
+    ConfigFile,
+    containers,
     directory,
     filepath,
+    filestore,
     gd,
     gitit,
     happstack-server,
     HTTP,
+    json,
     mtl,
     network,
     pandoc-types,
+    parsec,
     SHA,
     text,
     url,
